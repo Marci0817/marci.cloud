@@ -27,8 +27,9 @@ export default function Typing() {
 				staggerChildren: 0.1,
 				delayChildren: 0.5,
 			}}>
-			{toChar('Welcome back!').map((e) => (
+			{toChar('Welcome back!').map((e, index) => (
 				<motion.span
+					key={index}
 					className=''
 					variants={titleVariants}
 					transition={{ duration: 0 }}>

@@ -25,7 +25,7 @@ export default function Home() {
 							<Typing />
 						</div>
 						<div className='text-gray-600 mt-4 text-center md:text-md'>
-							Can't show further information..
+							Can&apos;t show further information..
 						</div>
 						<div className='mx-auto mt-8'>
 							<button
