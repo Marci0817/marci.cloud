@@ -1,2 +1,2 @@
-# szobeli-next-js
-szobeli.marci.cloud
+# marci.cloud
+marci.cloud
