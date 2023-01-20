@@ -11,11 +11,6 @@ export default function Home() {
 				<meta name='description' content='marci.cloud' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
-				<link rel='preconnect' href='https://fonts.googleapis.com' />
-				<link rel='preconnect' href='https://fonts.gstatic.com' />
-				<link
-					href='https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap'
-					rel='stylesheet'></link>
 			</Head>
 			<main className='bg-darkBlue h-screen w-full'>
 				<StatusCard />
