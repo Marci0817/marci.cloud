@@ -14,7 +14,7 @@ export default function Home() {
 			</Head>
 			<main className='bg-darkBlue h-screen w-full'>
 				<StatusCard />
-				<motion.div className='text-babyBlue font-poppins flex flex-row mt-64 justify-center items-center w-full'>
+				<motion.div className='text-babyBlue font-poppins flex flex-row justify-center items-center w-full'>
 					<div className='w-96 h-auto rounded-xl bg-white py-14 px-10 flex flex-col justify-between drop-shadow-2xl'>
 						<div className='text-center'>
 							<Typing />
