@@ -1,9 +1,8 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function StatusCard() {
-	const [statusCode, setStatusCode] = useState(1);
-
+	const [statusCode, setStatusCode] = useState<number>(1);
 	interface StatusCode {
 		text: string;
 		color: string;
@@ -14,10 +13,16 @@ export default function StatusCard() {
 	}
 
 	const statusCodes: StatusCodes = {
-		0: { text: "Connected to marci's network", color: 'green' },
-		1: { text: 'Connecting', color: 'yellow' },
-		404: { text: 'Error', color: 'red' },
+		0: { text: "Connected to marci's network", color: 'rgb(34 197 94)' },
+		1: { text: 'Connecting', color: 'rgb(234 179 8)' },
+		404: { text: 'Error', color: 'rgb(239 68 68)' },
 	};
+
+	useEffect(() => {
+		setTimeout(() => {
+			setStatusCode(0);
+		}, 3000);
+	}, []);
 
 	return (
 		<motion.div
@@ -27,16 +32,12 @@ export default function StatusCard() {
 			transition={{
 				y: { duration: 1 },
 				default: { ease: 'easeInOut' },
-			}}
-			onAnimationComplete={() =>
-				setTimeout(() => {
-					setStatusCode(0);
-				}, 3000)
-			}>
+			}}>
 			<div className='items-center text-indigo-100 leading-none rounded-full inline-flex'>
 				<motion.span
-					className={`flex w-3 h-3 rounded-full bg-${statusCodes[statusCode].color}-500`}
+					className={`flex w-3 h-3 rounded-full `}
 					animate={{ scale: [1.1, 1, 1.1] }}
+					style={{ backgroundColor: statusCodes[statusCode].color }}
 					transition={{
 						duration: 1,
 						repeat: Infinity,
