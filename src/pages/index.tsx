@@ -12,9 +12,9 @@ export default function Home() {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main className='bg-darkBlue h-screen w-full'>
+			<main className='bg-darkBlue w-full h-screen'>
 				<StatusCard />
-				<motion.div className='text-babyBlue font-poppins flex flex-row justify-center items-center w-full'>
+				<motion.div className='text-babyBlue font-poppins flex items-center justify-center -translate-y-1/2 top-1/3 relative'>
 					<div className='w-96 h-auto rounded-xl bg-white py-14 px-10 flex flex-col justify-between drop-shadow-2xl'>
 						<div className='text-center'>
 							<Typing />
@@ -36,16 +36,16 @@ export default function Home() {
 						</div>
 					</div>
 				</motion.div>
+				<div className='absolute w-full bottom-0'>
+					<p className='relative  left-1/2 -translate-x-1/2 w-full text-center text-gray-200 text-xs font-poppins mt-6 p-4'>
+						Copyright © {new Date().getFullYear()}{' '}
+						<a href='https://marci.cloud' className='text-blue-500'>
+							marci.cloud
+						</a>{' '}
+						All rights reserved.
+					</p>
+				</div>
 			</main>
-			<div className='relative w-full'>
-				<p className='absolute bottom-0 left-1/2 -translate-x-1/2 w-full text-center text-gray-200 text-xs font-poppins mt-6 p-4'>
-					Copyright © {new Date().getFullYear()}{' '}
-					<a href='https://marci.cloud' className='text-blue-500'>
-						marci.cloud
-					</a>{' '}
-					All rights reserved.
-				</p>
-			</div>
 		</>
 	);
 }

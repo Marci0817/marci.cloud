@@ -35,16 +35,13 @@ export default function StatusCard() {
 			}>
 			<div className='items-center text-indigo-100 leading-none rounded-full inline-flex'>
 				<motion.span
-					className={
-						'flex w-3 h-3 rounded-full bg-' +
-						statusCodes[statusCode].color +
-						'-500'
-					}
+					className={`flex w-3 h-3 rounded-full bg-${statusCodes[statusCode].color}-500`}
 					animate={{ scale: [1.1, 1, 1.1] }}
 					transition={{
 						duration: 1,
 						repeat: Infinity,
 					}}></motion.span>
+
 				<span className='font-semibold mr-2 text-left flex-auto ml-2'>
 					{statusCodes[statusCode].text}
 				</span>
